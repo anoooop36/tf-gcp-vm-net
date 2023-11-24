@@ -2,7 +2,7 @@ provider "google" {
   credentials = var.credentials
   project     = var.project
   region      = var.region
-  zone    = "us-central1-c"
+  zone    = var.zone
 }
 
 
@@ -34,6 +34,10 @@ variable "credentials" {}
 
 variable "region" {
 	default = "us-central1"
+}
+
+variable "zone" {
+	default = "us-central1-c"
 }
 
 variable "vm_name" {
